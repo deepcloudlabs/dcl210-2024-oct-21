@@ -21,5 +21,7 @@ public class Exercise09 {
 
 }
 
+@SuppressWarnings("serial")
 class E1 extends Exception {}
+@SuppressWarnings("serial")
 class E2 extends E1 {}

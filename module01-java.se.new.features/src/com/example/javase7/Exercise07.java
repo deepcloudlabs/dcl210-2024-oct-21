@@ -5,6 +5,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Exercise07 {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		Object o = null;
 		if (ThreadLocalRandom.current().nextBoolean()) {

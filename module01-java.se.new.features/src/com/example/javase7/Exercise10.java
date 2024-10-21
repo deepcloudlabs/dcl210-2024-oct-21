@@ -1,7 +1,5 @@
 package com.example.javase7;
 
-import java.io.IOException;
-
 public class Exercise10 {
 	public static void fun() throws Throwable {
 		PreciousResource res1 = new PreciousResource(1);

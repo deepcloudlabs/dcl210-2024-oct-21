@@ -2,6 +2,7 @@ package com.example.javase7;
 
 public class Exercise01 {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		int x = 1_000_000;
 		double y = 1_234_567.333_479;
