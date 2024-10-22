@@ -17,8 +17,8 @@ public class App {
 	public static void main(String[] args) {
 		JsonbConfig config = 
 			new JsonbConfig().withPropertyNamingStrategy(
-			  PropertyNamingStrategy.LOWER_CASE_WITH_UNDERSCORES
-			).withNullValues(true)
+			  PropertyNamingStrategy.UPPER_CAMEL_CASE
+			).withNullValues(false)
 			.withLocale(Locale.of("tr","TR"))
 			.withPropertyOrderStrategy(PropertyOrderStrategy.LEXICOGRAPHICAL)
 		    .withFormatting(true);
@@ -27,7 +27,7 @@ public class App {
 		String jsonEmployee = jsonb.toJson(jack);
 		System.out.println(jsonEmployee);
 		List<Employee> employees = Arrays.asList(
-				new Employee("1", "Jack Shephard", "jack.shephard@example.com", "TR1", BigDecimal.valueOf(100_000.1234)),
+				new Employee("1", "Jack Shephard", "jack.shephard@example.com", null, BigDecimal.valueOf(100_000.1234)),
 				new Employee("2", "Kate Austen", "kate.austen@example.com", "TR2", BigDecimal.valueOf(200_000.54321))
 		);
 		String jsonArrayEmployees = jsonb.toJson(employees);

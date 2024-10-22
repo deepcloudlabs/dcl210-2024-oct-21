@@ -2,17 +2,18 @@ package com.example.domain;
 
 import java.math.BigDecimal;
 
-import javax.json.bind.annotation.JsonbNumberFormat;
-import javax.json.bind.annotation.JsonbProperty;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Employee {
 	private String identityNo;
 	private String fullName;
-	@JsonbProperty("eposta")
+	@JsonProperty("eposta")
 	private String email;
-	//@JsonbTransient
+	@JsonIgnore
 	private String iban;
-	@JsonbNumberFormat(locale = "tr_TR", value = "#0.0")
+	@JsonFormat(locale = "tr_TR", pattern = "#0.0")
 	private BigDecimal salary;
 
 	public Employee() {
