@@ -20,7 +20,7 @@ public class StandardCalculator implements Calculator {
 
 	@Override
 	@Profile(TimeUnit.MILLISECONDS)
-	@Cacheable
+	@Cacheable("results")
 	public double add(double x, double y) {
 		return x + y;
 	}
