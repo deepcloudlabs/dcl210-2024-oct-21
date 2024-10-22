@@ -15,6 +15,9 @@ public class DemoApplication implements ApplicationRunner{
 	
 	public DemoApplication(Calculator calculator) {
 		this.calculator = calculator;
+		// Instrumentation-based AOP, CGLIB: Instrumentation Library
+		// com.example.service.impl.StandardCalculator$$SpringCGLIB$$0
+		System.out.println(calculator.getClass().getName());
 	}
 
 	public static void main(String[] args) {
