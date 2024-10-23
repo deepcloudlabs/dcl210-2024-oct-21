@@ -26,15 +26,15 @@ public class Exercise1 {
 
 	public static void main(String[] args) {
 		// Find the number of movies of each director
-        final Collection<Movie> movies = movieService.findAllMovies();
-        Map<Director,Long> directorsMovieCounts =
+        final var movies = movieService.findAllMovies();
+        var directorsMovieCounts =
         movies.stream() // Stream<Movie>
               .map(Movie::getDirectors) // Stream<List<Director>>
               .flatMap(List::stream) // Stream<Director>
               .collect(groupingBy(identity(),counting())); // Map<Director,Long>
         Comparator<Entry<Director, Long>> comparingLong = comparingLong(Entry::getValue);
 		directorsMovieCounts
-             .entrySet().stream().sorted(comparingLong)
+             .entrySet().stream().sorted(comparingLong.reversed())
              .forEach(e -> System.out.println(String.format("%s -> %d",e.getKey().getName(),e.getValue())));      
 	}
 
