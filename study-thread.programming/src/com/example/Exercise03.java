@@ -37,6 +37,4 @@ class Task implements Runnable {
 		return data.get();
 	}
 	
-	
-	
 }

@@ -15,6 +15,12 @@ public class Exercise02 {
         System.out.println("Duration: %d msec.".formatted((end-begin)));
         System.out.println(numbers.contains(42));
         // ordered
+        try {
+        	numbers.get(-1);
+        	
+        }catch (NullPointerException e) {
+			// TODO: handle exception
+		}
 	}
 
 }
