@@ -7,9 +7,9 @@ public class ListAlgorithms {
 
 	public static void main(String[] args) {
 //		 String serviceType= "Cipher";
-//		 String serviceType= "MessageDigest";
+		 String serviceType= "MessageDigest";
 //		 String serviceType= "Signature";
-		 String serviceType= "KeyStore";
+//		 String serviceType= "KeyStore";
 //		 String serviceType= "KeyGenerator";
 //		String serviceType= "SecureRandom";
 		
