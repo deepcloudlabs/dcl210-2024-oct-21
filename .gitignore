@@ -29,3 +29,4 @@ target/
 .classpath
 /target/
 */target/**
+**/target/
