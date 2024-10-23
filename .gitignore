@@ -27,3 +27,5 @@ target/
 .settings
 .project
 .classpath
+/target/
+*/target/**
