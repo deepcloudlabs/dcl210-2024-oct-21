@@ -22,10 +22,10 @@ public class Exercise4 {
 		// Find the highest populated capital city
 		var highPopCapital =
 		countryDao.findAllCountries()
-		          .stream()                   // Stream<Country>
-		          .map(Country::getCapital)   // Stream<Integer>
-		          .filter(Exercise4::positive)
-		          .map(cityDao::findCityById) // Stream<City>
+		          .stream()                    // Stream<Country>
+		          .map(Country::getCapital)    // Stream<Integer>
+		          .filter(Exercise4::positive) // Stream<Integer>
+		          .map(cityDao::findCityById)  // Stream<City>
 		          .collect(maxBy(comparing(City::getPopulation)));
 		highPopCapital.ifPresent(System.out::println);
 	}
